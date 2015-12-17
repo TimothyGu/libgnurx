@@ -27,6 +27,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+#if defined(__MINGW32_VERSION) || defined(_MSC_VER)
+#define strcasecmp stricmp
+#endif
+
 #if defined HAVE_LANGINFO_H || defined HAVE_LANGINFO_CODESET || defined _LIBC
 # include <langinfo.h>
 #endif
@@ -41,6 +45,8 @@
 #endif /* HAVE_WCTYPE_H || _LIBC */
 #if defined HAVE_STDBOOL_H || defined _LIBC
 # include <stdbool.h>
+#else
+typedef enum { false, true } bool;
 #endif /* HAVE_STDBOOL_H || _LIBC */
 #if defined HAVE_STDINT_H || defined _LIBC
 # include <stdint.h>
@@ -414,7 +420,16 @@ static unsigned int re_string_context_at (const re_string_t *input, int idx,
 #define re_string_skip_bytes(pstr,idx) ((pstr)->cur_idx += (idx))
 #define re_string_set_index(pstr,idx) ((pstr)->cur_idx = (idx))
 
-#include <alloca.h>
+#ifdef __GNUC__
+# define alloca(size)   __builtin_alloca (size)
+# define HAVE_ALLOCA 1
+#elif defined(_MSC_VER)
+# include <malloc.h>
+# define alloca _alloca
+# define HAVE_ALLOCA 1
+#else
+# error No alloca()
+#endif
 
 #ifndef _LIBC
 # if HAVE_ALLOCA
