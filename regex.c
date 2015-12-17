@@ -21,6 +21,8 @@
 #include "config.h"
 #endif
 
+#include "gnurx_internal.h"
+
 /* Make sure noone compiles this code with a C++ compiler.  */
 #ifdef __cplusplus
 # error "This is C code, use a C compiler"

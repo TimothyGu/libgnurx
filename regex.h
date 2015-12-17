@@ -22,6 +22,12 @@
 
 #include <sys/types.h>
 
+/* GNURX: from glibc-2.22/include/features.h */
+#undef	__USE_GNU
+#ifdef	_GNU_SOURCE
+# define __USE_GNU	1
+#endif
+
 /* Allow the use in C++ code.  */
 #ifdef __cplusplus
 extern "C" {

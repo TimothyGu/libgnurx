@@ -419,10 +419,12 @@ static unsigned int re_string_context_at (const re_string_t *input, int idx,
 #define re_string_skip_bytes(pstr,idx) ((pstr)->cur_idx += (idx))
 #define re_string_set_index(pstr,idx) ((pstr)->cur_idx = (idx))
 
-#ifdef __GNUC__
+#ifdef alloca
+# define HAVE_ALLOCA 1
+#elif defined __GNUC__
 # define alloca(size)   __builtin_alloca (size)
 # define HAVE_ALLOCA 1
-#elif defined(_MSC_VER)
+#elif defined _MSC_VER
 # include <malloc.h>
 # define alloca _alloca
 # define HAVE_ALLOCA 1
