@@ -7,6 +7,10 @@
 	* README: Add entry about updating to glibc 2.22.
 	* regex.3, regex.7: Updated from Linux man-pages upstream.
 	* .gitignore: New file.
+
+	* configure.ac: Bump to 2.6.0.
+	* configure: Regenerated.
+
 	* COPYING.LIB: Update to the newest version of LGPL 2.1.
 
 	* gnurx_internal.h: New file containing several macros defined by
