@@ -5,6 +5,7 @@
 	changes are recorded here.
 
 	* README: Add entry about updating to glibc 2.22.
+	* regex.3, regex.7: Updated from Linux man-pages upstream.
 	* .gitignore: New file.
 	* COPYING.LIB: Update to the newest version of LGPL 2.1.
 
