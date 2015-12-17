@@ -1,5 +1,13 @@
 2015-12-16  Timothy Gu  <timothygu99@gmail.com>
 
+	Add forgotten files from glibc 2.22
+
+	* configure.ac: Make C99 available.
+	* regcomp.c: Update to glibc 2.22. Fixes numerous vulnerabilities.
+	* regexec.c: Likewise.
+
+2015-12-16  Timothy Gu  <timothygu99@gmail.com>
+
 	Update to glibc 2.22. Since the full change log can be fetced from the
 	glibc source, only the most important changes and libgnurx-specific
 	changes are recorded here.
