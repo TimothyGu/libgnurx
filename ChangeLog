@@ -2,7 +2,8 @@
 
 	Add forgotten files from glibc 2.22
 
-	* configure.ac: Make C99 available.
+	* configure.ac: Make C99 available and bump to 2.6.1.
+	* configure: Regenerated.
 	* regcomp.c: Update to glibc 2.22. Fixes numerous vulnerabilities.
 	* regexec.c: Likewise.
 

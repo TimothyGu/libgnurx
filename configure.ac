@@ -20,7 +20,7 @@
 #
 # PATCHLEVEL is optional; comment/uncomment and adjust as required.
 #
-  MINGW_AC_DEFINE_PACKAGE_ID([PATCHLEVEL],    [0])
+  MINGW_AC_DEFINE_PACKAGE_ID([PATCHLEVEL],    [1])
 #
 # DLL_VERSION is required; installed DLLs will be versioned, by
 # appending a hyphen, the specified tag value, and then the `.dll'
