@@ -1,3 +1,26 @@
+2015-12-16  Timothy Gu  <timothygu99@gmail.com>
+
+	Update to glibc 2.22. Since the full change log can be fetced from the
+	glibc source, only the most important changes and libgnurx-specific
+	changes are recorded here.
+
+	* README: Add entry about updating to glibc 2.22.
+	* .gitignore: New file.
+	* COPYING.LIB: Update to the newest version of LGPL 2.1.
+
+	* gnurx_internal.h: New file containing several macros defined by
+	glibc internally, that are used in the changed files.
+
+	* regex.c (comment): Update license header.
+	* regex.h (comment): Likewise.
+	(macros): Hide more struct members and macros behind __USE_GNU. The
+	binary layout of the structures is not changed however.
+	* regex_internal.c (comment): Likewise.
+	(__attribute_warn_unused_result__): Use the macro more.
+	(security): Fix multiple security vulnerabilities.
+	* regex_internal.h (comment): Likewise.
+	(alloca): Make the fallback compatible with mingw-w64.
+
 2007-05-07  Keith Marshall  <keithmarshall@users.sourceforge.net>
 
 	Another bug reported by Julien Lecomte <julien@famille-lecomte.net>

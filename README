@@ -1,3 +1,10 @@
+This is the regex functionality from glibc 2.22 extracted into a
+separate library, for Win32. The original port was based on glibc
+2.5, and the original README file (recorded below) is still of
+high validity.
+
+--Timothy Gu  <timothygu99@gmail.com>
+
 This is the regex functionality from glibc 2.5 extracted into a
 separate library, for Win32.  It may be built, from the sources
 provided, using the command sequence:--
